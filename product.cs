@@ -8,11 +8,12 @@ namespace Finalproject
 {
     public class Product
     {
-        public string ProductCode {  get; set; }
-        public string ProductName { get; set; }
-        public double Price {  get; set; }
+        
+        public string ProductCode {  get; set; }//เก็บค่าโค้ดสินค้า
+        public string ProductName { get; set; }//เก็บค่าชื่อสินค้า
+        public double Price {  get; set; }//เก็บค่าราคาสินค้า
 
-        public Product(string code,string name, double price)
+        public Product(string code,string name, double price)//method ในการเก็บค่าที่ได้มาจากForm3
         {
             ProductCode
                 = code;
@@ -22,9 +23,10 @@ namespace Finalproject
     }
     public class ProductDatabase
     {
-        public Product[] Products { get; set; }
+        public Product[] Products { get; set; }// คอลเลกชันสินค้าที่เก็บข้อมูลสินค้าเป็นอาร์เรย์
         public ProductDatabase()
         {
+            // กำหนดค่าเริ่มต้นของฐานข้อมูลสินค้า
             Products = new Product[]
             {
                 new Product("001", "น้ำดื่ม", 10),
